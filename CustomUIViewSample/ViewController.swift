@@ -10,9 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        //タッチ位置を取得
+//        let touch: UITouch = touches.first!
+//        let location: CGPoint = touch.location(in: self.view)
+//        
+//        var customView: CustomView
+//        customView = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)!.first! as! CustomView
+//        customView.rightLabel.text = "右"
+//        customView.leftLabel.text = "左"
+//
+//        customView.center = CGPoint(x: location.x, y: location.y)
+//
+//        self.view.addSubview(customView)
+//
+//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        var customView: CustomView
+//        customView = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)!.first! as! CustomView
+//        customView.rightLabel.text = "右"
+//        customView.leftLabel.text = "左"
+//        self.view.addSubview(customView)
     }
 
 

@@ -13,6 +13,8 @@
 		66131A94219A89F500E68616 /* CustomUIViewSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66131A92219A89F500E68616 /* CustomUIViewSample.xcdatamodeld */; };
 		66131A96219A89F700E68616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66131A95219A89F700E68616 /* Assets.xcassets */; };
 		66131A99219A89F700E68616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66131A97219A89F700E68616 /* LaunchScreen.storyboard */; };
+		66131AA1219A8A4E00E68616 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66131AA0219A8A4E00E68616 /* CustomView.swift */; };
+		66131AA5219C261B00E68616 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66131AA4219C261B00E68616 /* CustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		66131A95219A89F700E68616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66131A98219A89F700E68616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66131A9A219A89F700E68616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66131AA0219A8A4E00E68616 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		66131AA4219C261B00E68616 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				66131A8B219A89F500E68616 /* AppDelegate.swift */,
 				66131A8D219A89F500E68616 /* ViewController.swift */,
+				66131AA0219A8A4E00E68616 /* CustomView.swift */,
+				66131AA4219C261B00E68616 /* CustomView.xib */,
 				66131A8F219A89F500E68616 /* Main.storyboard */,
 				66131A95219A89F700E68616 /* Assets.xcassets */,
 				66131A97219A89F700E68616 /* LaunchScreen.storyboard */,
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66131A99219A89F700E68616 /* LaunchScreen.storyboard in Resources */,
+				66131AA5219C261B00E68616 /* CustomView.xib in Resources */,
 				66131A96219A89F700E68616 /* Assets.xcassets in Resources */,
 				66131A91219A89F500E68616 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66131A8E219A89F500E68616 /* ViewController.swift in Sources */,
+				66131AA1219A8A4E00E68616 /* CustomView.swift in Sources */,
 				66131A8C219A89F500E68616 /* AppDelegate.swift in Sources */,
 				66131A94219A89F500E68616 /* CustomUIViewSample.xcdatamodeld in Sources */,
 			);
@@ -289,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JB2SDQGN3;
 				INFOPLIST_FILE = CustomUIViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JB2SDQGN3;
 				INFOPLIST_FILE = CustomUIViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
