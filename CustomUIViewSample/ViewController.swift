@@ -9,33 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        //タッチ位置を取得
-//        let touch: UITouch = touches.first!
-//        let location: CGPoint = touch.location(in: self.view)
-//        
-//        var customView: CustomView
-//        customView = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)!.first! as! CustomView
-//        customView.rightLabel.text = "右"
-//        customView.leftLabel.text = "左"
-//
-//        customView.center = CGPoint(x: location.x, y: location.y)
-//
-//        self.view.addSubview(customView)
-//
-//    }
+    @IBOutlet var firstCustomView: CustomView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        firstCustomView.rightLabel.text = "右"
+        firstCustomView.leftLabel.text = "左"
         
-//        var customView: CustomView
-//        customView = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)!.first! as! CustomView
-//        customView.rightLabel.text = "右"
-//        customView.leftLabel.text = "左"
-//        self.view.addSubview(customView)
+        let customView = CustomView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        view.addSubview(customView)
+        
+    }
+    
+    @IBAction func tapButton(){
+        var buttonedCustomView = CustomView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        buttonedCustomView.leftLabel.text = "left"
+        buttonedCustomView.rightLabel.text = "right"
+        view.addSubview(buttonedCustomView)
     }
 
 

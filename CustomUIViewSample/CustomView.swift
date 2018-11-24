@@ -18,16 +18,6 @@ class CustomView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-        let selfHeight: CGFloat = 50
-        let selfWidth: CGFloat = 320
-
-        self.frame.size.height = selfHeight
-        self.frame.size.width = selfWidth
-
-        let superScreen: CGRect = (self.window?.screen.bounds)!
-
-        self.frame.origin.x = (superScreen.width / 2) - (selfWidth / 2)
-        self.frame.origin.y = (superScreen.height / 2) - (selfHeight / 2)
     }
     
     //init処理の実装（再利用可能にする）
@@ -51,6 +41,35 @@ class CustomView: UIView {
         view.frame = self.bounds
         
         self.addSubview(view)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchedBegan")
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touchEvent = touches.first!
+        
+        //元座標の取得
+        let preX = touchEvent.previousLocation(in: self.view).x
+        let preY = touchEvent.previousLocation(in: self.view).y
+        
+        //移動後座標の取得
+        let newX = touchEvent.location(in: self.view).x
+        let newY = touchEvent.location(in: self.view).y
+        
+        //座標差分計算
+        let dx = newX - preX
+        let dy = newY - preY
+        
+        //差分反映
+        self.view.frame.origin.x += dx
+        self.view.frame.origin.y += dy
+        print("dx:\(dx),dy:\(dy)")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesEnded")
     }
     
 }
